@@ -1,0 +1,17 @@
+- hosts: all
+  vars:
+   variable:
+    - name: "item1"
+      vars:
+        - { id: 1, type: "get" , resource: "Customerid" }
+        - { id: 17, type: "post", resource: "Cus" }
+    - name: "item2"
+      vars:
+        - { id: 2, type: "get", resource: "Customerid" }
+  tasks:
+
+   - template:
+      src: test.j2
+      dest: "{{ item.name }}"
+     with_items: "{{ variable }}"
+       

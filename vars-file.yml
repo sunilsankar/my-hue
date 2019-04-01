@@ -1,0 +1,9 @@
+
+variable:
+    - name: "item1"
+      vars:
+        - { id: 1, type: "get" }
+        - { id: 17, type: "post" }
+    - name: "item2"
+      vars:
+        - { id: 2, type: "get" }

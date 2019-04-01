@@ -1,0 +1,7 @@
+{% for item in variable %}
+Item Name: {{ item.name }}
+{% for item_var in item.vars %}
+    Item ID: {{ item_var['id'] }}
+    Item Type: {{ item_var['type'] }}
+{% endfor %}
+{% endfor %}

@@ -1,0 +1,14 @@
+{% for item in variable %}
+Item Name: {{ item.name }}
+{% for item_var in item.vars %}
+{% if item_var['type'] == 'get' %}
+    Item ID: {{ item_var['id'] }}
+    Item Resource: {{ item_var['resource'] }}
+    Get function
+{% else %}
+    Item ID: {{ item_var['id'] }}
+    Item Resource: {{ item_var['resource'] }}
+    Post function
+{% endif %}
+{% endfor %}
+{% endfor %}
